@@ -91,7 +91,7 @@
 
 
 	<script>
-		// Decrease quantity of a product
+		
 		function decreaseQuantity(productId) {
 			var quantityInput = document.getElementById("product" + productId + "-quantity");
 			var currentQuantity = parseInt(quantityInput.value);
@@ -101,7 +101,7 @@
 			}
 		}
 
-		// Increase quantity of a product
+		
 		function increaseQuantity(productId) {
 			var quantityInput = document.getElementById("product" + productId + "-quantity");
 			var currentQuantity = parseInt(quantityInput.value);
@@ -111,8 +111,8 @@
 			}
 		}
 
-		// Update price of a product based on the quantity
-function updatePrice(productId) {
+		
+    function updatePrice(productId) {
     var quantityInput = document.getElementById("product" + productId + "-quantity");
     var currentQuantity = parseInt(quantityInput.value);
     var pricePerUnit = parseFloat(document.getElementById("product" + productId + "-price").innerHTML.substring(1));
@@ -122,7 +122,7 @@ function updatePrice(productId) {
     updateTotalPrice();
 }
 
-// Update the total price of the cart
+
 function updateTotalPrice() {
     var subtotalElement = document.getElementById("subtotal");
     var taxElement = document.getElementById("tax");
