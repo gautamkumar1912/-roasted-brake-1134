@@ -6,6 +6,7 @@
 		table {
 			border-collapse: collapse;
 			width: 100%;
+			text-align: center;
 		}
 
 		th, td {
@@ -43,7 +44,7 @@
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
-			padding: 4px 8px;
+			padding: 20px 200px;
 			margin: 0 4px;
 		}
 
@@ -54,6 +55,16 @@
 			border-radius: 4px;
 			font-size: 14px;
 		}
+		.button-container {
+            text-align: center;
+			align-items: center;
+			justify-content: center;
+			width: 800px;
+			
+        }
+
+		
+
 	</style>
 </head>
 <body>
@@ -88,10 +99,13 @@
 			<td>$60.00</td>
 		</tr>
 	</table>
+	<div class="button-container">
+		<button class="checkout-btn" onclick="goToPayment()">Pay</button>
+	</div>
+	  
 
 
 	<script>
-		
 		function decreaseQuantity(productId) {
 			var quantityInput = document.getElementById("product" + productId + "-quantity");
 			var currentQuantity = parseInt(quantityInput.value);
@@ -100,8 +114,7 @@
 				updatePrice(productId);
 			}
 		}
-
-		
+	
 		function increaseQuantity(productId) {
 			var quantityInput = document.getElementById("product" + productId + "-quantity");
 			var currentQuantity = parseInt(quantityInput.value);
@@ -110,35 +123,38 @@
 				updatePrice(productId);
 			}
 		}
-
-		
-    function updatePrice(productId) {
-    var quantityInput = document.getElementById("product" + productId + "-quantity");
-    var currentQuantity = parseInt(quantityInput.value);
-    var pricePerUnit = parseFloat(document.getElementById("product" + productId + "-price").innerHTML.substring(1));
-    var totalElement = document.getElementById("product" + productId + "-total");
-    var total = currentQuantity * pricePerUnit;
-    totalElement.innerHTML = "$" + total.toFixed(2);
-    updateTotalPrice();
-}
-
-
-function updateTotalPrice() {
-    var subtotalElement = document.getElementById("subtotal");
-    var taxElement = document.getElementById("tax");
-    var totalElement = document.getElementById("total");
-    var subtotal = 0;
-    var i;
-    for (i = 1; i <= 3; i++) {
-        subtotal += parseFloat(document.getElementById("product" + i + "-total").innerHTML.substring(1));
-    }
-    var tax = subtotal * 0.06;
-    var total = subtotal + tax;
-    subtotalElement.innerHTML = "$" + subtotal.toFixed(2);
-    taxElement.innerHTML = "$" + tax.toFixed(2);
-    totalElement.innerHTML = "$" + total.toFixed(2);
-}
-</script>
+	
+		function updatePrice(productId) {
+			var quantityInput = document.getElementById("product" + productId + "-quantity");
+			var currentQuantity = parseInt(quantityInput.value);
+			var pricePerUnit = parseFloat(document.getElementById("product" + productId + "-price").innerHTML.substring(1));
+			var totalElement = document.getElementById("product" + productId + "-total");
+			var total = currentQuantity * pricePerUnit;
+			totalElement.innerHTML = "$" + total.toFixed(2);
+			updateTotalPrice();
+		}
+	
+		function updateTotalPrice() {
+			var subtotalElement = document.getElementById("subtotal");
+			var taxElement = document.getElementById("tax");
+			var totalElement = document.getElementById("total");
+			var subtotal = 0;
+			var i;
+			for (i = 1; i <= 3; i++) {
+				subtotal += parseFloat(document.getElementById("product" + i + "-total").innerHTML.substring(1));
+			}
+			var tax = subtotal * 0.06;
+			var total = subtotal + tax;
+			subtotalElement.innerHTML = "$" + subtotal.toFixed(2);
+			taxElement.innerHTML = "$" + tax.toFixed(2);
+			totalElement.innerHTML = "$" + total.toFixed(2);
+		}
+	
+		function goToPayment() {
+			window.location.href = "payment.html";
+		}
+	</script>
+	
 
 
 </body>

@@ -86,26 +86,44 @@
       </div>
     </form>
     <script>
-        const form = document.getElementById('payment-form');
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-      
-          const formData = new FormData(form);
-          const paymentData = {};
-      
-          for (const [key, value] of formData.entries()) {
-            paymentData[key] = value;
-          }
-      
-          localStorage.setItem('paymentData', JSON.stringify(paymentData));
-      
-          alert('Order placed successfully!');
-      
-          form.reset();
-      
-          return false;
-        });
-      </script>
+      const form = document.querySelector('form');
+    
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        // Get form data
+        const name = form.elements.name.value;
+        const email = form.elements.email.value;
+        const address = form.elements.address.value;
+        const card = form.elements.card.value;
+        const exp_month = form.elements.exp_month.value;
+        const exp_year = form.elements.exp_year.value;
+        const cvv = form.elements.cvv.value;
+        const amount = form.elements.amount.value;
+    
+        // Create payment object
+        const payment = {
+          name,
+          email,
+          address,
+          card,
+          exp_month,
+          exp_year,
+          cvv,
+          amount
+        };
+    
+        // Store payment object in local storage
+        localStorage.setItem('paymentData', JSON.stringify(payment));
+    
+        // Show alert message
+        alert('Thank you for placing your order!');
+    
+        // Reset form
+        form.reset();
+      });
+    </script>
+    
       
       
       
