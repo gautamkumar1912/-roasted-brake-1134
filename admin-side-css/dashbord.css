@@ -1,0 +1,29 @@
+.details{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.details>div{
+    background-color: #76FF03;
+    border: 2px solid black;
+    width: 20%;
+    height: 100px;
+}
+
+.details>div>h2{
+    text-align: center;
+    align-self: center;
+}
+.column-main>#details{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+}
+.column-main>#details>div{
+    width: 20%;
+}
+#details>div>a{
+    text-decoration: none;
+    text-align: center;
+}
