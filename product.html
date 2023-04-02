@@ -5,58 +5,551 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       /* All Your css for Home page goes here  */
-      .nav{
-        display: flex;
-        justify-content: space-between;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        padding: 0px 30px;
-        margin-bottom: 15px;
-      }
-      .nav a{
-        text-decoration: none;
-        color: blue;
-      }
-      .nav>div{
-        width: 10%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #menu-container{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 15px;
-        padding: 0px 20px;
-      }
-      #menu-container>div{
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        padding: 10px 20px;
-      }
-      #menu-container img{
-        width: 90%;
-        display: block;
-        margin: auto;
-      }
-      #menu-container button{
-        background-color: #29B6F6;
-        color: white;
-        border: 0px;
-        border-radius: 5px;
-        height: 30px;
-        display: block;
-        margin: auto;
-      }
+      <!--font awesome-->
+   
+
+      .header {
+    background-color: rgb(19, 25, 33);
+    height: 60px;
+    color: white;
+   
+}
+
+
+/* layout**/
+ .container {
+    width: 99%;
+   
+    height: 100%;
+    margin: auto;
+
+}
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    
+} 
+
+/**logo***/
+.logo-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    
+}
+.logo>img{
+    width: 50px;
+    border-radius: 4px;
+}
+
+.dotin {
+    position: relative;
+    margin-left: -13px;
+    margin-top: -10px;
+}
+
+.border-white {
+    padding: 5px;
+    border: 1.5px solid transparent;
+}
+
+.border-white:hover {
+    border: 1.5px solid #ffffff;
+}
+
+/***********addresss************/
+.address-container {
+    margin-left: 10px;
+}
+
+.address-container p {
+    margin: 0;
+}
+
+.icon-address {
+    display: flex;
+    align-items: center;
+}
+
+.hello {
+    font-size: 0.8rem;
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.icon-location {
+    margin-right: 3px;
+}
+
+
+/***search-container****/
+ .search-container {
+    background-color: red;
+    margin-left: 25px;
+    /* width: 640px; */
+    width: 768px;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.search-container:hover {
+    outline: 3px solid orange;
+}
+
+.search-select {
+    width: 60px;
+    border: none;
+    background-color: rgb(230, 227, 227);
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 3px;
+    font-size: 1.1rem;
+}
+
+.search-icon {
+    width: 50px;
+    background-color: rgb(235, 160, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+
+/***lauguage section*/
+.language-container {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+.language-container p {
+    
+    font-family: sans-serif;
+    font-size: 0.8rem;
+   font-weight: 700;
+   margin-left:5px;
+}
+
+.lauguge-image {
+    width: 20px;
+}
+
+.lauguge-image img {
+    width: 100%;
+}
+ */ 
+
+/***login-container***/
+ .login-container {
+    font-size: 6px;
+    margin-left: 25px;
+    
+ 
+}
+
+ .login-container p{
+   
+    margin: 0;
+}
+#hello{
+    font-size: 11px;
+   color:whitesmoke;
+}
+.account {
+    font-weight: 600; 
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.return-order-container {
+    width: 65px;
+    /* font-size: 0.9rem; */
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.return-order-container p {
+    margin: 0;
+}
+
+.order {
+     font-weight: 600; 
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    width: 60px;
+}
+
+/****cart container***/
+ .cart-container {
+    /* font-size: 1.1rem; */
+    display: flex;
+  padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.cart-container>p{
+    font-size: 13px;
+    
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.cart-container i {
+    font-size: 23px;
+}  
+
+/**************************************navigation*****************************************/
+.nav {
+    height: 40px;
+    background-color: #232f3d;
+    margin: 0;
+ 
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    font-family: sans-serif;
+}
+
+.container-nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    list-style: none;
+}
+
+.container-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 2px;
+    font-size: 14px;
+
+}
+
+ .nav-right-image-amazon-prime {
+   /* border: 1px solid blue; */
+    min-width: 395px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+    height: 40px;
+    max-width: 700px;
+    padding-right: 25px;
+}
+
+.nav-right-image-amazon-prime img {
+    width: 30px;
+   border-radius: 4px;
+ 
+}
+.nav-right-image-amazon-prime>p{
+   font-size: 18px;
+   color: white;
+} 
+.prime-image-hover{
+    width: 60px;
+}
+.prime-image-hover i{
+    margin-left: 4px;
+}
+ .prime-image {
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    color: #000;
+    margin-left: -10px;
+    transition: display 1s;
+    padding: 10px;
+} 
+
+ .prime-image-hover:hover .prime-image {
+    transition: display 1s;
+    display: block;
+} 
+
+.prime-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: var(--major-bg-color);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+footer .top {
+    background: #37475a;
+  }
+   footer .top >a {
+    padding: 17px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-size: 14px;
+    text-decoration: none;
+  } 
+  
+  footer .top a:hover {
+    color: #fff;
+  }
+  
+  footer .top:hover {
+    background: #485769;
+  }
+  
+  footer .center {
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+  
+  footer ul {
+    margin: 30px 40px 30px 0;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+  }
+  
+  footer .middle {
+    background: #232f3e;
+    text-align: center;
+    /* border: 1px solid green; */
+  }
+  
+  footer .middle h3 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom :10px;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  footer .middle li {
+    position: relative;
+  }
+  
+  footer .middle .logo {
+    background: transparent url('../img/logo.png') no-repeat 0 0;
+    background-size: 76px;
+    width: 76px;
+    height: 23px;
+    display: block;
+    border: none !important;
+    margin-right: 60px;
+    position: absolute;
+    top: -14px;
+    left: -120px;
+  }
+  
+  footer .middle a {
+    color: darkgray;
+  
+    font-size: 13px;
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+  }
+  footer .middle a:hover{
+    text-decoration: underline;
+  }
+  
+  footer ul.copy {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  footer ul.copy li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #999;
+    font-size: 11px;
+  }
+  
+  footer .middle .copy {
+    border-top: 1px solid #3a4553;
+    padding: 30px 20px 20px 20px;
+  }
+  
+  footer .middle .copy a {
+    padding: 10px 30px 10px 10px;
+    color: #ccc;
+    border: 1px solid #848688;
+    border-radius: 3px;
+    text-decoration: underline;
+  }
+  
+  footer .middle .copy a:hover {
+    text-decoration: none;
+    border-color: #8D9096;
+  }
+  
+  footer .middle .fa-globe {
+    margin-right: 5px;
+  }
+  
+  footer .middle .flag-icon-us {
+    background-image: url('https://sp-bootstrap.global.ssl.fastly.net/8.0.0/images/flags/us.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 1em;
+    width: 1.33333333em;
+    margin-right: 7px;
+    background-position: 0 2px;
+  }
+  
+ 
+
+
     </style>
   </head>
 
   <body>
-    <div class="nav">
-      <h1>Web Coffee Shop Menu</h1>
+    <header class="header">
+      <div class="container-header">
+          <div class="logo-container">
+              <div class="logo">
+                  <img src="./a2z.jpg" alt="error">
+              </div>
+          </div>
+
+          <div class="address-container">
+              <p class="hello">Hello</p>
+              <div class="icon-address">
+                  <i class="fa-solid fa-location-dot icon-location"></i>
+                  <p>Select your address</p>
+              </div>
+          </div>
+
+          <div class="search-container">
+              <select class="search-select">
+                  <option>All</option>
+              </select>
+              <input type="text" class="search-input" />
+              <div class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+          </div>
+
+          <div class="language-container border-white">
+            
+              <div class="lauguge-image">
+                  <img
+                      src="https://media.istockphoto.com/vectors/vector-flag-of-the-republic-of-india-proportion-23-the-national-flag-vector-id1051236720?k=20&m=1051236720&s=612x612&w=0&h=ATObRTHmTosADa9zaB2dQPn_VAQmG1XYH2x92kzc304=" />
+              </div>
+              <p>EN</p>
+          </div>
+
+         <a  href="login.html"><div class="login-container">
+          <p id="hello">Hello,<span>sign in</span></p>
+          <p class="account">Account & Lists <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+      </div></a>
+
+          <div class="return-order-container">
+             
+              <p>Returns <div class="order">
+                 <div> & </div>
+                 <div>Orders</div>
+              </div>
+              </p>
+          </div>
+
+          <div class="cart-container ">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <p>Cart</p>
+          </div>
+      </div>
+  </header> 
+
+  <!--navigation-->
+  <nav class="nav">
+      <div class="container-nav">
+          <ul>
+              <li class="border-white" id="open-nav-sidebar">
+                  <span class="open-nav-slider">
+                      <i class="fa-solid fa-bars"></i>
+                      All
+                  </span>
+              </li>
+              <li class="border-white"><a href="#">Sell</a></li>
+              <li class="border-white"><a href="#">Amazon miniTV</a></li>
+            <li class="border-white"><a href="#">Best Sellers</a></li>
+            <li class="border-white"><a href="#">Mobiles</a></li>
+              <li class="border-white"><a href="#">Today's Deals</a></li>
+            
+              <li class="border-white"><a href="#">Customer Service</a></li>
+              <li class="border-white"><a href="#">Electronics</a></li>
+              <li class="prime-image-hover">
+                  <a href="#">Prime<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                  <div class="prime-image">
+                      <img
+                          src="https://m.media-amazon.com/images/G/31/prime/NavFlyout/TryPrime/2018/Apr/IN-Prime-PIN-TryPrime-MultiBen-Apr18-400x400._CB442254244_.jpg" />
+                  </div>
+
+              </li>
+              <li class="border-white"><a href="#">Amazon Pay</a></li>
+              <li class="border-white"><a href="#">New Releases</a></li>
+              <li class="border-white"><a href="#">Home & Kitchen</a></li>
+              
+            
+              
+          </ul>
+       
+        <div class="nav-right-image-amazon-prime">
+                  <img src="./a2z.jpg" alt="error">
+                  <p>Shopping made easy | Download the app</p>
+          </div>
+      </div>
+  </nav>
+
+     
       <div>
         <a href="./index.html">Home</a>
-        <a href="./order.html">Ordered</a>
+        <!-- <a href="./order.html">Ordered</a> -->
       </div>
     </div>
     <div id="filter">
@@ -73,6 +566,67 @@
     <div id="menu-container">
       <!-- Here Append All the Items  -->
     </div>
+    <footer>
+      <div class="top">
+        <a href="#nav-top">Back to top</a>
+      </div>
+  
+      <div class="middle">
+        <div class="center">
+          <ul>
+            <li><h3>Get to Know Us</h3></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About A2Z SHOP</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">A2Z SHOP Devices</a></li>
+          </ul>
+          <ul>
+            <li><h3>Make Money with Us</h3></li>
+            <li><a href="#">Sell on A2Z SHOP</a></li>
+            <li><a href="#">Sell Your Services on A2Z SHOP</a></li>
+            <li><a href="#">Sell on A2Z SHOP Business</a></li>
+            <li><a href="#">Sell Your Apps on A2Z SHOP</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Self-Publish with Us</a></li>
+            <li><a href="#">Become an A2Z SHOP Vendor</a></li>
+            <li><a href="#">Sell Your Subscription on A2Z SHOP</a></li>
+            <li><a href="#">› See all</a></li>
+          </ul>
+          <ul>
+            <li><h3>A2Z SHOP Payment Products</h3></li>
+            <li><a href="#">A2Z SHOP Rewards Visa Signature Cards</a></li>
+            <li><a href="#">A2Z SHOP.com Store Card</a></li>
+            <li><a href="#">A2Z SHOP.com Corporate Credit Line</a></li>
+            <li><a href="#">Shop with Points</a></li>
+            <li><a href="#">Credit Card Marketplace</a></li>
+            <li><a href="#">Reload Your Balance</a></li>
+            <li><a href="#">A2Z SHOP Currency Converter</a></li>
+          </ul>
+          <ul>
+            <li><h3>Let Us Help You</h3></li>
+            <li><a href="#">Your Account</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Shipping Rates &amp; Policies</a></li>
+            <li><a href="#">A2Z SHOP Prime</a></li>
+            <li><a href="#">Returns &amp; Replacements</a></li>
+            <li><a href="#">Manage Your Content and Devices</a></li>
+            <li><a href="#">A2Z SHOP Assistant</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+  
+        <ul class="copy">
+          <li><a href="#" class="logo"></a></li>
+          <li><a href="#" class="select"><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
+          <li><a href="#" class="select"><i class="flag-icon-us"></i>United States</a></li>
+        </ul>
+        
+      </div>
+    
+     
+    </footer>
+
   </body>
   <script>
     // All your JS code for Home Page goes here
