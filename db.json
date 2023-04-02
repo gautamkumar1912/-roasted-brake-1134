@@ -1,6 +1,23 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name":"sarthak kathiriya",
+      "email":"skkathiriya012345@gmail.com",
+      "password":"123456",
+      "mobile":9773060443
+    }
+  ],
+
   "products":[],
+
   "cart":[],
-  "admin":[]
+  
+  "admin":[
+    {
+      "name":"sarthak kathiriya",
+      "email":"skkathiriya012345@gmail.com",
+      "password":"123456",
+      "mobile":9773060443
+    }
+  ]
 }
