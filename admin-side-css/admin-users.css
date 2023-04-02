@@ -1,0 +1,26 @@
+table{
+    width: 100%;
+    margin: auto;
+    padding: 0px 30px;
+    /* margin: 10px 30px; */
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+    
+}
+thead td{
+    background-color: #FFB300;
+    height: 35px;
+  }
+
+  tbody td{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  tbody td:last-child{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
