@@ -1,10 +1,10 @@
 let url='https://amazone-s9tx.onrender.com/'
 let user=document.getElementById('user-data')
 
-async function userdata(){
+async function productdata(){
     try {
         
-        let res=await fetch(`${url}users`)
+        let res=await fetch(`${url}products`)
         let data= await res.json();
         user.innerHTML=null;
         data.forEach(e => {
@@ -15,11 +15,11 @@ async function userdata(){
             let name=document.createElement('td')
             name.innerText = e.name
 
-            let email=document.createElement('td')
-            email.innerText = e.email
+            let desc=document.createElement('td')
+            desc.innerText = e.desc
 
-            let phone=document.createElement('td')
-            phone.innerText = e.mobile
+            let price=document.createElement('td')
+            price.innerText = e.price
 
             let btn=document.createElement('td')
             
@@ -31,7 +31,7 @@ async function userdata(){
 
             })
             
-            tr.append(num,name,email,phone,btn)
+            tr.append(num,name,desc,price,btn)
 
             user.append(tr)
         });
@@ -41,12 +41,12 @@ async function userdata(){
         console.log(error)
     }
 }
-userdata()
+productdata()
 
 async function deleteData(id) {
     console.log(id)
     try {
-        let res = await fetch(`${url}/users/${id}`, {
+        let res = await fetch(`${url}/products/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

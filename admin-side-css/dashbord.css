@@ -13,6 +13,7 @@
 .details>div>h2{
     text-align: center;
     align-self: center;
+    /* cursor: ; */
 }
 .column-main>#details{
     width: 100%;
