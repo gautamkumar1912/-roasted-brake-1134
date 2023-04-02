@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+    <link rel="stylesheet" href="sell.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<style>
+        *{
+            font-family: 'Lato', sans-serif;
+        }
+        .crauser{
+            margin-left: 180px;
+            width: 100%;
+        }
+    .crauser img{
+        width: 80%;
+    }
+
+.crauser>button{
+    position: absolute;
+    top: 200px;
+    font-size: 50px;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+background-color: white;
+    
+}
+.crauser>button:hover{
+    background-color: black ;
+    color: white;
+}
+.crauser>button:nth-child(2){
+    left: 91px;
+}
+.crauser>button:nth-child(3){
+    right:20px;
+}
+        #partners{
+            text-align: center;
+        }
+        h1+p{
+            font-size: larger;
+        }
+        #brand{
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(2,100px);
+            margin: auto;
+            width:90%;
+        }
+        #offer{
+            margin: 100px auto 50px auto;
+            border: 1px solid transparent;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,800px);
+        }
+        #offer img,#Trending img{
+            width:100%;
+        }
+        #offer img:first-child{
+            height: 78%;
+        }
+        #offer >div>div {
+            
+    border: 1px solid transparent;
+    text-align: center;
+
+        }
+        #Btn{
+            padding: 0px 30px;
+            cursor:pointer;
+        }
+        h2{
+            width: 100%; 
+            text-align: center; 
+            border-bottom: 4px solid #f8f7f6;
+            line-height: 0.1em;
+            /* margin: 10px 0 20px;  */
+            margin:60px 0 0 0 ;
+        } 
+        
+        h2 span { 
+             background:#fff; 
+            padding:0 10px; 
+        }
+        
+        #Trending{
+            margin: 100px auto 50px auto;
+            border: 1px solid transparent;
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,606px);
+        }
+        #Trending>div{
+            border: 1px solid transparent;
+           
+        }
+        #Trending>div>div,#recently>div>div{
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        #Trending > div >img,#recently>div>img{
+            height: 69%;
+            width: 100%;
+        }
+     
+        h4{
+            text-align: center;
+        }
+        #recently{
+            border: 1px solid transparent;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,606px);
+            width: 90%;
+            margin: 100px auto 50px auto;
+        }
+        
+        h4{
+            text-align: center;
+        }
+        
+        #offerBtn{
+            background: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+        }
+      .navBar {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 26px;
+            margin: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+ 
+        .menu {
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+ 
+        .menu:hover {
+            text-decoration: underline;
+        }
+ 
+        .material-icons {
+            display: flex;
+            justify-content: space-around;
+        }
+ 
+        .tool {
+            display: flex;
+            margin: 20px 20px;
+        }
+ 
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+ 
+<body>
+    <header class="header">
+        <div class="container-header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./a2z.jpg" alt="error">
+                </div>
+            </div>
+
+            <div class="address-container">
+                <p class="hello">Hello</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p>Select your address</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" class="search-input" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+            <div class="language-container border-white">
+              
+                <div class="lauguge-image">
+                    <img
+                        src="https://media.istockphoto.com/vectors/vector-flag-of-the-republic-of-india-proportion-23-the-national-flag-vector-id1051236720?k=20&m=1051236720&s=612x612&w=0&h=ATObRTHmTosADa9zaB2dQPn_VAQmG1XYH2x92kzc304=" />
+                </div>
+                <p>EN</p>
+            </div>
+
+           <a  href="login.html"><div class="login-container">
+            <p id="hello">Hello,<span>sign in</span></p>
+            <p class="account">Account & Lists <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+        </div></a>
+
+            <div class="return-order-container">
+               
+                <p>Returns <div class="order">
+                   <div> & </div>
+                   <div>Orders</div>
+                </div>
+                </p>
+            </div>
+
+            <div class="cart-container ">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </div>
+    </header> 
+
+    <!--navigation-->
+    <nav class="nav">
+        <div class="container-nav">
+            <ul>
+                <li class="border-white" id="open-nav-sidebar">
+                    <span class="open-nav-slider">
+                        <i class="fa-solid fa-bars"></i>
+                        All
+                    </span>
+                </li>
+                <li class="border-white"><a href="#">Sell</a></li>
+                <li class="border-white"><a href="#">Amazon miniTV</a></li>
+              <li class="border-white"><a href="#">Best Sellers</a></li>
+              <li class="border-white"><a href="#">Mobiles</a></li>
+                <li class="border-white"><a href="#">Today's Deals</a></li>
+              
+                <li class="border-white"><a href="#">Customer Service</a></li>
+                <li class="border-white"><a href="#">Electronics</a></li>
+                <li class="prime-image-hover">
+                    <a href="#">Prime<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <div class="prime-image">
+                        <img
+                            src="https://m.media-amazon.com/images/G/31/prime/NavFlyout/TryPrime/2018/Apr/IN-Prime-PIN-TryPrime-MultiBen-Apr18-400x400._CB442254244_.jpg" />
+                    </div>
+
+                </li>
+                <li class="border-white"><a href="#">Amazon Pay</a></li>
+                <li class="border-white"><a href="#">New Releases</a></li>
+                <li class="border-white"><a href="#">Home & Kitchen</a></li>
+                
+              
+                
+            </ul>
+         
+          <div class="nav-right-image-amazon-prime">
+                    <img src="./a2z.jpg" alt="error">
+                    <p>Shopping made easy | Download the app</p>
+            </div>
+        </div>
+    </nav>
+        <div class="crauser">
+            <button><</button>
+            <button>></button>
+        </div>
+    <h2><span>Special Offer</span></h2>
+    <div id="offer">
+
+    </div>   
+    <h2><span>Trending Now</span></h2>
+    <div id="Trending">
+
+    </div>
+    <h2><span>Recently View</span></h2>
+    <div id="recently">
+        
+
+    </div>
+    <footer>
+        <div class="top">
+          <a href="#nav-top">Back to top</a>
+        </div>
+    
+        <div class="middle">
+          <div class="center">
+            <ul>
+              <li><h3>Get to Know Us</h3></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">About A2Z SHOP</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">A2Z SHOP Devices</a></li>
+            </ul>
+            <ul>
+              <li><h3>Make Money with Us</h3></li>
+              <li><a href="#">Sell on A2Z SHOP</a></li>
+              <li><a href="#">Sell Your Services on A2Z SHOP</a></li>
+              <li><a href="#">Sell on A2Z SHOP Business</a></li>
+              <li><a href="#">Sell Your Apps on A2Z SHOP</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+              <li><a href="#">Self-Publish with Us</a></li>
+              <li><a href="#">Become an A2Z SHOP Vendor</a></li>
+              <li><a href="#">Sell Your Subscription on A2Z SHOP</a></li>
+              <li><a href="#">› See all</a></li>
+            </ul>
+            <ul>
+              <li><h3>A2Z SHOP Payment Products</h3></li>
+              <li><a href="#">A2Z SHOP Rewards Visa Signature Cards</a></li>
+              <li><a href="#">A2Z SHOP.com Store Card</a></li>
+              <li><a href="#">A2Z SHOP.com Corporate Credit Line</a></li>
+              <li><a href="#">Shop with Points</a></li>
+              <li><a href="#">Credit Card Marketplace</a></li>
+              <li><a href="#">Reload Your Balance</a></li>
+              <li><a href="#">A2Z SHOP Currency Converter</a></li>
+            </ul>
+            <ul>
+              <li><h3>Let Us Help You</h3></li>
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Your Orders</a></li>
+              <li><a href="#">Shipping Rates &amp; Policies</a></li>
+              <li><a href="#">A2Z SHOP Prime</a></li>
+              <li><a href="#">Returns &amp; Replacements</a></li>
+              <li><a href="#">Manage Your Content and Devices</a></li>
+              <li><a href="#">A2Z SHOP Assistant</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+    
+          <ul class="copy">
+            <li><a href="#" class="logo"></a></li>
+            <li><a href="#" class="select"><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
+            <li><a href="#" class="select"><i class="flag-icon-us"></i>United States</a></li>
+          </ul>
+          
+        </div>
+      
+       
+      </footer>
+    
+    
+    
+</body>
+</html>
+<script src="sell.js"></script>
